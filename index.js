@@ -1,8 +1,8 @@
 const remainTime = document.querySelector('h1#time');
 
 function diffDay() {
-  const masTime = new Date("2022-08-22 09:00");
-  const todayTime = new Date();
+  const masTime = Date.parse(new Date("2022-08-22 09:00"));
+  const todayTime = Date.parse(new Date());
   const diff = masTime - todayTime;
 
   const diffDay = String(Math.floor(diff / (1000*60*60*24)));
@@ -17,3 +17,9 @@ function diffDay() {
 
 diffDay();
 setInterval(diffDay, 1000);
+
+function convertDateForIos(date) {
+  var arr = date.split(/[- :]/);
+  date = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
+  return date;
+}
