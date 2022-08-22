@@ -1,7 +1,7 @@
 const remainTime = document.querySelector('h1#time');
 
 function diffDay() {
-  const masTime = Date.parse(new Date("2022/08/22 09:30"));
+  const masTime = Date.parse(new Date("2022/08/30 09:30"));
   const todayTime = Date.parse(new Date());
   const diff = masTime - todayTime;
 
